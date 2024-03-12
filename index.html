@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">MEN'S HOUSE</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="research..." aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+    <!--container-->
+    <div class="container">
+        <div class="header">
+            <h1>Welcome to our Shopping website !</h1>
+            <button class="btn btn-outline-success" data-bs-target=".modal-connexion" data-bs-toggle="modal">Connexion</button>
+            <button class="btn btn-outline-success" data-bs-target=".modal-inscription" data-bs-toggle="modal">Login</button>
+        </div>
+
+        <!--modal inscription-->
+        <div class="modal modal-inscription" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputFirstname" class="form-label">Firstname</label>
+                          <input type="text" class="form-control" id="exampleInputFirstname">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputLastname" class="form-label">Lastname</label>
+                          <input type="text" class="form-control" id="exampleInputLastname">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword2">
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!--modal connexion-->
+        <div class="modal modal-connexion" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Connexion</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck">
+                        <label class="form-check-label" for="exampleCheck">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <!--carousel-->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/assets/slider/hangers-1850082.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Beautiful shirts</h5>
+                  <p>Explore the world of our shirts</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/slider/jeans-4050815.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Our pants</h5>
+                  <p>Discover our best pants</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/slider/mens-shoes-875950.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Beautiful shoes</h5>
+                  <p>Be dazzled by our most beautiful creations</p>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!--section habits-->
+        <section class="shirts bg-secondary p-2">
+            <div class="section-title">
+                <h2>Best shirts</h2>
+            </div>
+            <!--cards-->
+            <div class="cards d-flex align-items-center justify-content-center px-5 gap-3 flex-wrap">
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/teq_rose_1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shirt for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/t-shirt-homme-stone-fitness.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shirt for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/tshirt-homme-oversized-premium-.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shirt for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/tshirt-homme-gris-tendance-tsh365.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shirt for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/th-moda-1970-chine-orange-t-shirts-mc-homme.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shirt for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/196427.1695416495569_search.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shirt for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--section pantalons-->
+        <section class="pants p-2">
+            <div class="section-title">
+                <h2>Our pants</h2>
+            </div>
+            <!--cards-->
+            <div class="cards d-flex align-items-center justify-content-center px-5 gap-3 flex-wrap">
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/pantalons/253745466_max.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pant for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/pantalons/e9e9150f45f4f368aa910cf12f5b8d6c.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pant for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/pantalons/38b5161f9e6a4fada25c0f77c5e979fc.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pant for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/pantalons/66c00ba13d8ceb15946c3a5a86f81d4e.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pant for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/pantalons/D336501_1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pant for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/pantalons/pantalon-homme-decontractes-pour-hommes-pantalons.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Pant for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--section chaussures-->
+        <section class="shoes p-2 bg-secondary">
+            <div class="section-title">
+                <h2>Pretty shoes</h2>
+            </div>
+            <div class="cards d-flex align-items-center justify-content-center px-5 gap-3 flex-wrap">
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/chaussures/1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shoes for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/chaussures/feet-1840619.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shoes for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/chaussures/necktie-1284463.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shoes for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/chaussures/S4d08d307a80e4001a0d3a967c4de4cdaN.jpg_640x640Q90.jpg_.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shoes for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/chaussures/shoes-1011596.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shoes for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/chaussures/shoes-584850.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Shoes for men</h5>
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--sections meilleures ventes-->
+        <section class="best-shop p-2">
+            <div class="section-title">
+                <h2>Our best winds</h2>
+            </div>
+            <div class="cards d-flex align-items-center justify-content-center px-5 gap-3 flex-wrap">
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/pantalons/IMG_3365_1024x1024.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/pantalons/téléchargement.jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/chaussures/casual-chaussure-homme-basket-homme-respirant-d.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/téléchargement (1).jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/chemise-madras-sergio.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/chaussures/chaussures-montantes-mode-chaussure-homme-basket-h.webp" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/images (2).jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem; height: 420px;">
+                    <img src="/assets/shirts/images (1).jpeg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">€39.99</p>
+                      <a href="#" class="btn btn-primary">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--service-->
+        <div class="services d-flex align-items-center justify-content-between">
+            <div class="service-item">
+                <h5>Quick delivery</h5>
+                <i class="fa-solid fa-truck"></i>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro amet, 
+                    possimus soluta modi labore at illum voluptatibus 
+                    asperiores sapiente cumque dignissimos quibusdam adipisci, 
+                    alias sint tempore debitis obcaecati ullam eos?</p>
+            </div>
+            <div class="service-item">
+                <h5>Secure payment</h5>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro amet, 
+                    possimus soluta modi labore at illum voluptatibus 
+                    asperiores sapiente cumque dignissimos quibusdam adipisci, 
+                    alias sint tempore debitis obcaecati ullam eos?</p>
+            </div>
+            <div class="service-item">
+                <h5>Online support</h5>
+                <i class="fa-solid fa-circle-info"></i>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro amet, 
+                    possimus soluta modi labore at illum voluptatibus 
+                    asperiores sapiente cumque dignissimos quibusdam adipisci, 
+                    alias sint tempore debitis obcaecati ullam eos?</p>
+            </div>
+        </div>
+
+        <!--banière sponsor-->
+        <section class="sponsor d-flex align-items-center justify-content-between px-5 flex-wrap">
+            <div class="sponsor-icons d-flex align-items-center justify-content-between px-5 flex-wrap">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-tiktok"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+            </div>
+        </section>
+
+        <!--confidentialité-->
+        <div class="confid">
+            <div class="section-title">
+                <h2>Privacy and Security</h2>
+            </div>
+            <div class="content">
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, a necessitatibus ullam earum beatae reiciendis repellat amet quae nemo qui aliquam suscipit placeat, quo culpa, impedit quidem facilis esse mollitia?
+                    Excepturi, atque explicabo. Necessitatibus atque veniam fugiat delectus maiores nostrum ratione nihil voluptatum et deserunt autem unde amet dolor, accusantium sequi obcaecati! Itaque illum quod ad voluptatibus accusamus nostrum perferendis!
+                    Consectetur, natus maiores ad saepe nesciunt voluptatum pariatur error laboriosam porro officiis dicta accusantium quidem deserunt autem sapiente unde praesentium doloribus quaerat non similique iusto rerum ut! Quo, reiciendis nemo.
+                    Maiores delectus nisi assumenda! Illum id inventore pariatur, rem officiis, at delectus alias, quasi possimus blanditiis natus? Maiores blanditiis excepturi repudiandae dicta sunt sequi expedita? Mollitia culpa placeat voluptas quas?
+                    Aliquid alias laboriosam nobis quis unde atque iure ab nihil magni est perferendis recusandae, ipsum consequatur ad, et impedit! Qui temporibus rem neque unde! Commodi repellat amet sint reiciendis laborum.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!--footer-->
+    <footer class="footer bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                  <p class="text-muted">© 2023 Mon site web. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-muted">Contactez-nous: <a href="mailto:contact@mon-site.com">menshouse@.com</a></p>
+                </div>
+            </div>    
+        </div>
+    </footer>
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>
